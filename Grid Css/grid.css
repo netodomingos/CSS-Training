@@ -1,0 +1,38 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+
+header{
+    background: yellow;
+    grid-area: header;
+}
+
+main{
+    background: blue;
+    grid-area: main;
+}
+
+section{
+    background: green;
+    grid-area: section;
+}
+
+footer{
+    background:red;
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 2 Colunas */
+    grid-template-rows: 20vh 70vh 10vh; /* vh => View Height */
+    
+    /* grid-gap: 20px; Espaçamento entre colunas */
+
+    grid-template-areas: "header header"  /* Header ocupa toda a primeira row*/
+                         "main section"   /* main e section divide a segunda row */
+                         "footer footer"; /* footer ocupa toda a terceira row */
+}
